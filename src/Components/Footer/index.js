@@ -41,7 +41,7 @@ export default function Footer(props) {
           <span>Imersão React da Alura</span>
         </a>
       </p>
-<br />
+      <br />
       <a href="https://www.freepik.com/photos/technology">Technology photo created by kjpargeter - www.freepik.com</a>
     </FooterWrapper>
   );
