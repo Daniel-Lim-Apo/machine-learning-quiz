@@ -11,6 +11,7 @@ import QuizBackGround from '../src/Components/QuizBackGround';
 import QuizContainer from '../src/Components/QuizContainer';
 import QuizLogo from '../src/Components/QuizLogo';
 import Widget from '../src/Components/Widget';
+import Input from '../src/Components/Input';
 
 // const Title = styled.h1`
 //   font-size: 50px;
@@ -63,21 +64,18 @@ export default function Home() {
               // router mandando para próxima página
             }}
             >
-              <input
-                onChange={function (eventInfo) {
-                  console.log(eventInfo.target.value);
-                  // State
-                  setYourName(eventInfo.target.value);
-                }}
+              <Input
+                name="userName"
+                onChange={(eventInfo) => setYourName(eventInfo.target.value)}
                 placeholder="Tell me... What`s your name?"
+                value={yourName}
               />
-              <button type="submit" disabled={yourName.length === 0}>
-                Start
-                <br />
-                {yourName}
-                <br />
+              <Button type="submit" disabled={yourName.length === 0}>
+                {`Start 
+                ${yourName}'s 
                 Game
-              </button>
+                `}
+              </Button>
             </form>
             </Widget.Content>
         </Widget>
